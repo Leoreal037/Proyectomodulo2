@@ -3,9 +3,11 @@ $(document).ready(function(){
     /*CSS jquery pantalla inicio sesion*/
     var global1
     var global2
+    var global3
+    var global4
     $("#boton-siguiente").click(function(){
         var a =$("#ingreso-email").val();
-        var email
+
         if(a != ""){
             email=a
         }
@@ -41,16 +43,16 @@ $(document).ready(function(){
                     claveyury=456
                 }
                 else {
-                    alert("email incorrecto")
+                    alert("email no registrado")
                 }
                 var l = global2;
                 if(l == claveleo){
                     alert("contraseña correcta "+ l)
-                    document.write('Email y contraseña correcta´INGRESAR'.link('https://www.youtube.com/'))
+                    document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'))
                 }
                 else if(l == claveyury){
                     alert("contraseña correcta "+ l)
-                    document.write('Email y contraseña correcta´INGRESAR'.link('https://www.youtube.com/'))
+                    document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'));
                 }
                 else {
                     alert("contraseña incorrecta")
@@ -61,7 +63,7 @@ $(document).ready(function(){
 
     /*CSS jquery pantalla registro*/
 
-    $("#boton-registro").click(function(){
+    $("#boton-registrar").click(function(){
         var h =$("#registro-email").val();
         var correo
         if(h != "" ){
@@ -70,11 +72,12 @@ $(document).ready(function(){
         }
         else {
         alert (h+" ingrese valores coherentes")
-        }
         return correo
+        }
+        global3 = correo
     })
 
-    $("#boton-registro").click(function(){
+    $("#boton-registrar").click(function(){
         var d =$("#registro-contraseña").val();
         var contraseña
         if(d >= 1){
@@ -82,9 +85,19 @@ $(document).ready(function(){
             alert("su contraseña es " + contraseña)
         }
         else {
-        alert (d+"ingrese valores coherentes")
-        }
+        alert (d+"ingrese valores coherentes");
         return contraseña
+        }
+        global4 = contraseña
+
+             /*funcion para validar llenado de espacios de email y contraseña*/
+     function validar_registro (){
+        if (global3!="" && global4 !=""){
+            alert("registro exitoso ")
+            document.write('registro exitoso´INGRESAR'.link('https://www.youtube.com/'))
+        } 
+     }
+     validar_registro ()
     })
 
 });
