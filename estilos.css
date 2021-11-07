@@ -1,3 +1,4 @@
+/*CSS Clases de pantalla inicio secion y registro*/
 .fondo{
     background-color: #ebf3fa;
 }
@@ -66,3 +67,5 @@ box-shadow: 0 0 0 2px rgba(0,113,187,0.5);
     font-weight: 700;
     padding: 0.75rem 1.25rem;
 }
+
+  
