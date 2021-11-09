@@ -25,7 +25,7 @@ $(document).ready(function(){
                 contraseña=n
             }
             else {
-            alert (n+"ingrese valores coherentesssssss")
+            alert (n+"ingrese valores coherentes")
             return n
             }
             global2=n
@@ -94,12 +94,23 @@ $(document).ready(function(){
      function validar_registro (){
         if (global3!="" && global4 !=""){
             alert("registro exitoso ")
-            document.write('registro exitoso´INGRESAR'.link('https://www.youtube.com/'))
+            document.write('registro exitoso´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/datos.html'))
         } 
      }
      validar_registro ()
     })
-
+    /*CSS jquery pantalla formulario ingreso de datos*/
+        /*mover los datos de los input a variables*/
+    $("#boton-cargar").click(function(){
+        var nombre =$("#nombre").val();
+        var email =$("#email").val();
+        var direccion =$("#direccion").val();
+        var ciudad =$("#ciudad").val();
+        var celular =$("#celular").val();
+        var telefono =$("#telefono").val();
+        var mensaje =$("#mensaje").val();
+        alert(nombre+email+direccion+ciudad+celular+telefono+mensaje)
+    })
 });
 
 

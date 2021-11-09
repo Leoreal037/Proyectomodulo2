@@ -21,39 +21,44 @@
 </head>
 <body class="fondo">
  <!--parte uno-->
- <div class="bg-dark">
+ <div class="fondo">
      <div class="row justify-content-center bordesdatos">
          <div class="col-12 bg-light rounded bordesdatos mt-5">
             <h1 class="text-center text-dark">Formulario para el ingreso de datos</h1>
             <h2 class="text-center text-secondary">Nuevos usuarios</h2>
             <hr class="bg-light w-75">
+                    <!--Datos de entrada del formulario-->
                 <div class="form-group">
-                    <input type="text" name="nombre" class="form-control bg-light"
+                    <input type="text" id="nombre" class="form-control bg-light"
                     placeholder="nombre" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control bg-light"
+                    <input type="email" id="email" class="form-control bg-light"
                     placeholder="email" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="direccion" class="form-control bg-light"
+                    <input type="text" id="direccion" class="form-control bg-light"
                     placeholder="direccion" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="ciudad" class="form-control bg-light"
+                    <input type="text" id="ciudad" class="form-control bg-light"
                     placeholder="cuidad" required>
                 </div>
                 <div class="form-group">
-                    <input type="number" name="celular" class="form-control bg-light"
+                    <input type="number" id="celular" class="form-control bg-light"
                     placeholder="movil" required>
                 </div>
                 <div class="form-group">
-                    <input type="number" name="telefono" class="form-control bg-light"
+                    <input type="number" id="telefono" class="form-control bg-light"
                     placeholder="telefono" required>
                 </div>
                 <div class="form-group">
                     <textarea name="mensaje" id="mensaje" class="form-control bg-light"
                     placeholder="mensaje" rows="4" required></textarea>
+                </div>
+                <!--Boton para cargar datos-->
+                <div>
+                    <button type="submit" id="boton-cargar" class="boton1"> Cargar Datos </button>
                 </div>
          </div>
 
