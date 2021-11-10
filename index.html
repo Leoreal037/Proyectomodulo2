@@ -13,18 +13,33 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
     crossorigin="anonymous">
     
+
     <style>
-        #compra{
+        #pantalla-registro{
         display:none;
         }
     </style>
-
+        <style>
+            #pantalla-ingreso-datos{
+            display:none;
+            }
+        </style>
+     <style>
+        #pantalla-bienvenida{
+        display:none;
+        }
+    </style>   
+     <style>
+        #pantalla-datos-ingresados{
+        display:none;
+        }
+    </style>
 </head>
 <body class="fondo">
 
  <!--Pantalla de iniciar sesion-->
  
-    <div class="container">
+    <div class="container" id="pantalla-inicio-sesion">
         <div class="caja-externa">
             <h1 class="bold">
                 Iniciar sesión
@@ -33,7 +48,8 @@
             <div class="caja-email">
                 <label>Dirección de correo electrónico</label>
                 <br>
-                <input class="entrada" id="ingreso-email" type="email"
+                <input class="entrada" id="ingreso-email" type="email" class="form-control bg-light"
+                placeholder="email" required
                 autocorrect="off" aria-invalid="false" required="required" aria-required="true" type="email" 
                 value="" name="user[email]" id="user_email">
             </div>
@@ -41,7 +57,7 @@
             <div class="caja-contraseña">
                 <label class="bold email required" for="user_email">Contraseña</label>
                 <br>
-                <input class="entrada" id="ingreso-contraseña" type="password"
+                <input class="entrada" id="ingreso-contraseña" type="password" placeholder="password" required
                 autocorrect="off" aria-invalid="false" required="required" aria-required="true" type="email" 
                 value="" name="user[email]" id="user_email">
             </div>
@@ -49,12 +65,105 @@
             <div>
                 <button type="submit" id="boton-siguiente" class="boton1"> Siguiente </button>
             </div>
-            <!--crear cuenta-->
-            <a class="text-decoration-none usa-button usa-button--outline usa-button--full-width" 
-            href="file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/registro.html">Crear cuenta</a>
+            <!--boton crear cuenta-->
+            <div>
+                <button type="submit" id="boton-crear-cuenta" class="boton1"> Crear cuenta</button>
+            </div>
+
+        </div>
+ 
+    </div>
+       <!--mensaje de bienvenida-->
+        <div>
+            <a class="caja-externa" id="pantalla-bienvenida" href="file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html">Bienvenido a la pagina de muebles Resort</a>
+        </div>
+    <!--Pantalla registro-->
+ 
+    <div class="container"id="pantalla-registro">
+        <div class="caja-externa">
+            <h1 class="bold">
+                Registro de usuario
+              </h1>
+              <!--ingreso email-->
+            <div class="caja-email">
+                <h4>Por favor ingrese su direccion de correo electronico</h4>
+                <label>Dirección de correo electrónico</label>
+                <br>
+                <input class="entrada" id="registro-email" type="email" placeholder="email" required
+                autocorrect="off" aria-invalid="false" required="required" aria-required="true" type="email" 
+                value="" name="user[email]" id="user_email">
+            </div>
+            <!--ingreso contraseña-->
+            <div class="caja-contraseña">
+                <h4>Por favor ingrese una contraseña no menor a 4 digitos</h4>
+                <label class="bold email required" for="user_email">Contraseña</label>
+                <br>
+                <input class="entrada" id="registro-contraseña" class="form-control bg-light"
+                placeholder="password" required
+                autocorrect="off" aria-invalid="false" required="required" aria-required="true" type="email" 
+                value="" name="user[email]" id="user_email">
+            </div>
+            <!--boton siguiente-->
+            <div>
+                <button type="submit" id="boton-registrar" class="boton1"> Registrar </button>
+            </div>
+                
+            </div>
+
+    </div>
+
+     <!--pantalla de ingreso de datos-->
+ <div class="fondo" id="pantalla-ingreso-datos">
+    <div class="row justify-content-center bordesdatos">
+        <div class="col-12 bg-light rounded bordesdatos mt-5">
+           <h1 class="text-center text-dark">Formulario para el ingreso de datos</h1>
+           <h2 class="text-center text-secondary">Nuevos usuarios</h2>
+           <hr class="bg-light w-75">
+                   <!--Datos de entrada del formulario-->
+               <div class="form-group">
+                   <input type="text" id="nombre" class="form-control bg-light"
+                   placeholder="nombre" required>
+               </div>
+               <div class="form-group">
+                   <input type="email" id="email" class="form-control bg-light"
+                   placeholder="email" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" id="direccion" class="form-control bg-light"
+                   placeholder="direccion" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" id="ciudad" class="form-control bg-light"
+                   placeholder="cuidad" required>
+               </div>
+               <div class="form-group">
+                   <input type="number" id="celular" class="form-control bg-light"
+                   placeholder="movil" required>
+               </div>
+               <div class="form-group">
+                   <input type="number" id="telefono" class="form-control bg-light"
+                   placeholder="telefono" required>
+               </div>
+               <div class="form-group">
+                   <textarea name="mensaje" id="mensaje" class="form-control bg-light"
+                   placeholder="mensaje" rows="4" required></textarea>
+               </div>
+               <!--Boton para cargar datos-->
+               <div>
+                   <button type="submit" id="boton-cargar" class="boton1"> Cargar Datos </button>
+               </div>
         </div>
 
     </div>
+
+</div>
+</div>
+
+<!--Pantalla que muestra los datos ingresado-->
+    <div class="results caja-externa" id="pantalla-datos-ingresados">
+    <h2 >Bienvenido sus datos ingresados son:</h2>
+    </div>
+<!--Pantalla registro-->
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     

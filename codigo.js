@@ -29,16 +29,17 @@ $(document).ready(function(){
             return n
             }
             global2=n
-            /*funcion para validar email y contraseña*/
+            /*funcion para validar email y contraseña 
+            Usuario 1 (leo@gmai clave 123) y el segundo usuario (yury@gmail clave 456)*/
                 function validar_email () {
                 var c = global1;
                 var claveleo
                 var claveyury
-                if(c == "leo"){
+                if(c == "leo@gmail"){
                     alert("email correcto "+ c)
                     claveleo=123
                 }
-                else  if(c == "yury"){
+                else  if(c == "yury@gmail"){
                     alert("email correcto "+ c)
                     claveyury=456
                 }
@@ -48,20 +49,35 @@ $(document).ready(function(){
                 var l = global2;
                 if(l == claveleo){
                     alert("contraseña correcta "+ l)
-                    document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'))
+                    //document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'))
+                    $("#pantalla-inicio-sesion").hide()
+                    $("#pantalla-bienvenida").show()
                 }
                 else if(l == claveyury){
                     alert("contraseña correcta "+ l)
-                    document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'));
+                    //document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'));
+                    /*muestra pantalla de bienvenida*/
+                        /*$("#boton-siguiente").click(function(){*/
+                            $("#pantalla-inicio-sesion").hide()
+                            $("#pantalla-bienvenida").show()
+                       /* })*/
                 }
                 else {
                     alert("contraseña incorrecta")
                 }
         }
         validar_email ()
-    })
+        
 
-    /*CSS jquery pantalla registro*/
+    })
+        /*funcion para el boton crear cuenta*/
+        $("#boton-crear-cuenta").click(function(){
+            $("#pantalla-registro").show()
+            $("#pantalla-inicio-sesion").hide()
+            
+        })
+
+        /*CSS jquery pantalla registro*/
 
     $("#boton-registrar").click(function(){
         var h =$("#registro-email").val();
@@ -94,7 +110,8 @@ $(document).ready(function(){
      function validar_registro (){
         if (global3!="" && global4 !=""){
             alert("registro exitoso ")
-            document.write('registro exitoso´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/datos.html'))
+            $("#pantalla-ingreso-datos").show()
+            $("#pantalla-registro").hide()
         } 
      }
      validar_registro ()
@@ -109,8 +126,14 @@ $(document).ready(function(){
         var celular =$("#celular").val();
         var telefono =$("#telefono").val();
         var mensaje =$("#mensaje").val();
+        $("#pantalla-ingreso-datos").hide()
+        $("#pantalla-datos-ingresados").show()
+        $('.results').html("Los datos ingresados son  " + nombre+email+direccion+ciudad+celular+telefono+mensaje);
         alert(nombre+email+direccion+ciudad+celular+telefono+mensaje)
     })
+
+    /*Mostrar ocultar en jquery
+        $("#div").hide();
+        $("#div").show()*/
+
 });
-
-
