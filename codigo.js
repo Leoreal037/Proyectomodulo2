@@ -16,6 +16,7 @@ $(document).ready(function(){
         return a
         }
         global1=a
+        $("#ingreso-email").val("");
     })
 
     $("#boton-siguiente").click(function(){
@@ -25,7 +26,7 @@ $(document).ready(function(){
                 contraseña=n
             }
             else {
-            alert (n+"ingrese valores coherentes")
+            alert (n+"ingrese valores")
             return n
             }
             global2=n
@@ -48,13 +49,13 @@ $(document).ready(function(){
                 }
                 var l = global2;
                 if(l == claveleo){
-                    alert("contraseña correcta "+ l)
+                    alert("contraseña correcta ")
                     //document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'))
                     $("#pantalla-inicio-sesion").hide()
                     $("#pantalla-bienvenida").show()
                 }
                 else if(l == claveyury){
-                    alert("contraseña correcta "+ l)
+                    alert("contraseña correcta ")
                     //document.write('Email y contraseña correcta´INGRESAR'.link('file:///c:/Users/USER/OneDrive%20-%20WOLTA%20Centro%20de%20An%C3%A1lisis%20El%C3%A9ctrico%20S.A.S/Escritorio/Personal/Curso%20programacion%20colsubsidio/Modulo%202/Proyecto%20noviembre/resort.html'));
                     /*muestra pantalla de bienvenida*/
                         /*$("#boton-siguiente").click(function(){*/
@@ -87,10 +88,11 @@ $(document).ready(function(){
             alert("su correo es " + correo)
         }
         else {
-        alert (h+" ingrese valores coherentes")
+        alert (h+" ingrese valores")
         return correo
         }
         global3 = correo
+        $("#registro-email").val("");
     })
 
     $("#boton-registrar").click(function(){
@@ -101,15 +103,15 @@ $(document).ready(function(){
             alert("su contraseña es " + contraseña)
         }
         else {
-        alert (d+"ingrese valores coherentes");
+        alert (d+"ingrese valores");
         return contraseña
         }
         global4 = contraseña
+        $("#registro-contraseña").val("");
 
              /*funcion para validar llenado de espacios de email y contraseña*/
      function validar_registro (){
         if (global3!="" && global4 !=""){
-            alert("registro exitoso ")
             $("#pantalla-ingreso-datos").show()
             $("#pantalla-registro").hide()
         } 
@@ -128,8 +130,7 @@ $(document).ready(function(){
         var mensaje =$("#mensaje").val();
         $("#pantalla-ingreso-datos").hide()
         $("#pantalla-datos-ingresados").show()
-        $('.results').html("Los datos ingresados son  " + nombre+email+direccion+ciudad+celular+telefono+mensaje);
-        alert(nombre+email+direccion+ciudad+celular+telefono+mensaje)
+        $('.results').html("Los datos ingresados son  " +"nombre"+" "+ nombre+" "+"email"+" "+email+" "+"direccion"+" "+direccion+" "+"ciudad"+" "+ciudad+" "+"Celular"+celular+" "+"telefono"+" "+telefono+" "+"Mensaje"+" "+mensaje);
     })
 
     /*Mostrar ocultar en jquery
